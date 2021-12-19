@@ -20,24 +20,3 @@ $$
         END LOOP;
     END;
 $$
-
-
-
---     CREATE OR REPLACE PROCEDURE insertVaccines()
--- LANGUAGE PLPGSQL
--- AS
--- $$
---     BEGIN
---         INSERT INTO vaccines (
---                 vac_name
---             ) 
---             SELECT 
---                 vbl_vaccines
---             FROM 
---                 vaccines_by_location
---             ON CONFLICT 
---                 (vac_name)
---             DO NOTHING
---         COMMIT;
---     END;
--- $$
